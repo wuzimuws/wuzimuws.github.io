@@ -4,7 +4,7 @@
   <title><![CDATA[子木自语]]></title>
   <link href="http://zimuziyu.com/atom.xml" rel="self"/>
   <link href="http://zimuziyu.com/"/>
-  <updated>2017-12-27T23:45:05+08:00</updated>
+  <updated>2017-12-27T23:53:37+08:00</updated>
   <id>http://zimuziyu.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -13,7 +13,7 @@
   <generator uri="http://www.mweb.im/">MWeb</generator>
   
   <entry>
-    <title type="html"><![CDATA[zai ji]]></title>
+    <title type="html"><![CDATA[再加一个试试]]></title>
     <link href="http://zimuziyu.com/15143899087455.html"/>
     <updated>2017-12-27T23:51:48+08:00</updated>
     <id>http://zimuziyu.com/15143899087455.html</id>
@@ -36,9 +36,8 @@ git remote add origin https://github.com/wuzimuws/wuzimuws.github.io.git
 git push -u origin master
 </code></pre>
 
-<h1 id="toc_0">网址</h1>
-
-<p>wuzimuws.github.io</p>
+<p>网址<br/>
+wuzimuws.github.io</p>
 
 ]]></content>
   </entry>
