@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[zimuziyu]]></title>
+  <title><![CDATA[子木自语]]></title>
   <link href="http://zimuziyu.com/atom.xml" rel="self"/>
   <link href="http://zimuziyu.com/"/>
-  <updated>2017-12-27T23:23:10+08:00</updated>
+  <updated>2017-12-27T23:25:45+08:00</updated>
   <id>http://zimuziyu.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -18,12 +18,13 @@
     <updated>2017-12-27T23:23:39+08:00</updated>
     <id>http://zimuziyu.com/15143882196495.html</id>
     <content type="html"><![CDATA[
-<p>echo &quot;# wuzimuws.github.io&quot; &gt;&gt; README.md<br/>
-git init<br/>
-git add .<br/>
-git commit -m &quot;first commit&quot;<br/>
-git remote add origin <a href="https://github.com/wuzimuws/wuzimuws.github.io.git">https://github.com/wuzimuws/wuzimuws.github.io.git</a><br/>
-git push -u origin master</p>
+<pre><code>echo &quot;# wuzimuws.github.io&quot; &gt;&gt; README.md
+git init
+git add .
+git commit -m &quot;first commit&quot;
+git remote add origin https://github.com/wuzimuws/wuzimuws.github.io.git
+git push -u origin master
+</code></pre>
 
 <h1 id="toc_0">网址</h1>
 
