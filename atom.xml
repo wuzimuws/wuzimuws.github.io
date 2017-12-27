@@ -4,13 +4,24 @@
   <title><![CDATA[zimuziyu]]></title>
   <link href="http://zimuziyu.com/atom.xml" rel="self"/>
   <link href="http://zimuziyu.com/"/>
-  <updated>2017-12-27T22:59:48+08:00</updated>
+  <updated>2017-12-27T23:13:16+08:00</updated>
   <id>http://zimuziyu.com/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[发布成功啦]]></title>
+    <link href="http://zimuziyu.com/15143874941277.html"/>
+    <updated>2017-12-27T23:11:34+08:00</updated>
+    <id>http://zimuziyu.com/15143874941277.html</id>
+    <content type="html"><![CDATA[
+<p>2017.12.27 23:12</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[试一试]]></title>
