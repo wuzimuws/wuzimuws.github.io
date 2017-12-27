@@ -4,13 +4,33 @@
   <title><![CDATA[zimuziyu]]></title>
   <link href="http://zimuziyu.com/atom.xml" rel="self"/>
   <link href="http://zimuziyu.com/"/>
-  <updated>2017-12-27T23:13:33+08:00</updated>
+  <updated>2017-12-27T23:23:10+08:00</updated>
   <id>http://zimuziyu.com/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[发布命令]]></title>
+    <link href="http://zimuziyu.com/15143882196495.html"/>
+    <updated>2017-12-27T23:23:39+08:00</updated>
+    <id>http://zimuziyu.com/15143882196495.html</id>
+    <content type="html"><![CDATA[
+<p>echo &quot;# wuzimuws.github.io&quot; &gt;&gt; README.md<br/>
+git init<br/>
+git add .<br/>
+git commit -m &quot;first commit&quot;<br/>
+git remote add origin <a href="https://github.com/wuzimuws/wuzimuws.github.io.git">https://github.com/wuzimuws/wuzimuws.github.io.git</a><br/>
+git push -u origin master</p>
+
+<h1 id="toc_0">网址</h1>
+
+<p>wuzimuws.github.io</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[发布成功啦]]></title>
