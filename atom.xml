@@ -4,7 +4,7 @@
   <title><![CDATA[zimuziyu]]></title>
   <link href="http://zimuziyu.com/atom.xml" rel="self"/>
   <link href="http://zimuziyu.com/"/>
-  <updated>2017-12-28T00:02:30+08:00</updated>
+  <updated>2017-12-28T13:53:40+08:00</updated>
   <id>http://zimuziyu.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -18,6 +18,12 @@
     <updated>2017-12-27T23:51:48+08:00</updated>
     <id>http://zimuziyu.com/15143899087455.html</id>
     <content type="html"><![CDATA[
+<p>发现更新有问题</p>
+
+<pre><code>To https://github.com/wuzimuws/wuzimuws.github.io.git
+ ! [rejected]        master -&gt; master (fetch first)
+error: failed to push some refs to &#39;https://github.com/wuzimuws/wuzimuws.github.io.git&#39;
+</code></pre>
 
 ]]></content>
   </entry>
