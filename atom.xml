@@ -4,7 +4,7 @@
   <title><![CDATA[zimuziyu]]></title>
   <link href="http://zimuziyu.com/atom.xml" rel="self"/>
   <link href="http://zimuziyu.com/"/>
-  <updated>2017-12-29T14:18:10+08:00</updated>
+  <updated>2017-12-29T14:29:29+08:00</updated>
   <id>http://zimuziyu.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -21,7 +21,11 @@
 <p>真是一件值得庆祝的事儿！<br/>
 待办的事情：<br/>
 1.找一款更好用的mac截屏软件<br/>
-2.push 命令更正</p>
+2.push 命令更正<br/>
+<code><br/>
+git push -u origin master<br/>
+</code><br/>
+只要这行就行</p>
 
 ]]></content>
   </entry>
@@ -79,26 +83,20 @@ error: failed to push some refs to &#39;https://github.com/wuzimuws/wuzimuws.git
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[发布命令]]></title>
+    <title type="html"><![CDATA[发布步骤]]></title>
     <link href="http://zimuziyu.com/15143882196495.html"/>
     <updated>2017-12-27T23:23:39+08:00</updated>
     <id>http://zimuziyu.com/15143882196495.html</id>
     <content type="html"><![CDATA[
-<pre><code>echo &quot;# wuzimuws.github.io&quot; &gt;&gt; README.md
-git init
-git add .
-git commit -m &quot;first commit&quot;
-git remote add origin https://github.com/wuzimuws/wuzimuws.github.io.git
-git push -u origin master
-</code></pre>
+<h4 id="toc_0">发布的步骤</h4>
 
-<p>网址<br/>
-wuzimuws.github.io</p>
+<p>在mweb写完了之后，双击文档库，清理并重新生成网站，随后可通过两种方式进行发布：</p>
 
-<pre><code>git add --ignore-removal .
-git commit -m &quot;cname&quot;
-git push -u origin master
-</code></pre>
+<p>1.在<strong>终端</strong>通过下面列出的命令进行push：</p>
+
+<p><code>git push -u origin master</code></p>
+
+<p>2.在GitHub desktop 的左侧变更中进行commit，然后push，具体参见</p>
 
 ]]></content>
   </entry>
