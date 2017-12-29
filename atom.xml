@@ -4,13 +4,49 @@
   <title><![CDATA[zimuziyu]]></title>
   <link href="http://zimuziyu.com/atom.xml" rel="self"/>
   <link href="http://zimuziyu.com/"/>
-  <updated>2017-12-28T13:53:40+08:00</updated>
+  <updated>2017-12-28T18:45:58+08:00</updated>
   <id>http://zimuziyu.com/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[发布过程中遇到的问题]]></title>
+    <link href="http://zimuziyu.com/15145271894707.html"/>
+    <updated>2017-12-29T13:59:49+08:00</updated>
+    <id>http://zimuziyu.com/15145271894707.html</id>
+    <content type="html"><![CDATA[
+<p>1.如何让github 与 本地文件夹同步，在不采用的命令行push 的情况下<br/>
+    由于之前是在 terminal中，用命令行的方式写入文件和代码，以及push到github仓库，所以并不能利用github desktop来方便地管理，尤其是对于我这样的代码新手来说；<br/>
+    在下载了GitHub desktop之后，在从网页端克隆到本地的时候，在本地新生成了一个文件夹，目前要解决的就是令网页端和本地文件夹的同步问题。<br/>
+    解决方案很简单：<br/>
+    在desktop中左上角新建存储库，选择Mweb输出的文件夹，然后会生成警告，点击‘add this repository’即可。<br/>
+    <img src="media/15145271894707/15145278116053.jpg" alt="" style="width:300px;"/>  <img src="media/15145271894707/15145278487998.jpg" alt="" style="width:300px;"/></p>
+
+<p>2.发布时需要填写commit，才可以发布，不然没有push的选项<br/>
+<img src="media/15145271894707/15145282617678.jpg" alt=""/></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[github设置]]></title>
+    <link href="http://zimuziyu.com/15144435156505.html"/>
+    <updated>2017-12-28T14:45:15+08:00</updated>
+    <id>http://zimuziyu.com/15144435156505.html</id>
+    <content type="html"><![CDATA[
+<p><a href="http://www.cnfeat.com/blog/2014/05/11/how-to-build-a-blog/">http://www.cnfeat.com/blog/2014/05/11/how-to-build-a-blog/</a><br/>
+1. 本地ssh设置<br/>
+open ~/.ssh<br/>
+2. github ssh上传<br/>
+3. 用户名 wuzimuws<br/>
+4. 密码 八位<br/>
+5. <a href="https://wuzimuws.github.io">https://wuzimuws.github.io</a></p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[再加一个试试]]></title>
@@ -44,6 +80,11 @@ git push -u origin master
 
 <p>网址<br/>
 wuzimuws.github.io</p>
+
+<pre><code>git add --ignore-removal .
+git commit -m &quot;cname&quot;
+git push -u origin master
+</code></pre>
 
 ]]></content>
   </entry>
