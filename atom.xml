@@ -4,13 +4,27 @@
   <title><![CDATA[zimuziyu]]></title>
   <link href="http://zimuziyu.com/atom.xml" rel="self"/>
   <link href="http://zimuziyu.com/"/>
-  <updated>2017-12-28T18:45:58+08:00</updated>
+  <updated>2017-12-29T14:18:10+08:00</updated>
   <id>http://zimuziyu.com/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[域名成功链接到github，个人博客成功开通喽～]]></title>
+    <link href="http://zimuziyu.com/15145288525022.html"/>
+    <updated>2017-12-29T14:27:32+08:00</updated>
+    <id>http://zimuziyu.com/15145288525022.html</id>
+    <content type="html"><![CDATA[
+<p>真是一件值得庆祝的事儿！<br/>
+待办的事情：<br/>
+1.找一款更好用的mac截屏软件<br/>
+2.push 命令更正</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[发布过程中遇到的问题]]></title>
@@ -96,16 +110,6 @@ git push -u origin master
     <id>http://zimuziyu.com/15143874941277.html</id>
     <content type="html"><![CDATA[
 <p>2017.12.27 23:12</p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[试一试]]></title>
-    <link href="http://zimuziyu.com/15143859015163.html"/>
-    <updated>2017-12-27T22:45:01+08:00</updated>
-    <id>http://zimuziyu.com/15143859015163.html</id>
-    <content type="html"><![CDATA[
 
 ]]></content>
   </entry>
