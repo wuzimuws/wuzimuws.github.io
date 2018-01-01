@@ -2,9 +2,11 @@
 title: Markdown 语法和 MWeb 写作使用说明
 date: 2018-01-01 09:38:20
 categories:
-- MWeb Markdown
+- MWeb
+- Markdown
 tags:
-- Mweb Markdown 
+- Mweb
+- Markdown 
 ---
 
 ## Markdown 的设计哲学
