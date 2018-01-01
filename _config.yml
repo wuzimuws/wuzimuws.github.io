@@ -233,7 +233,7 @@ social_icons:
 # Sidebar Avatar
 # in directory: /assets/images/wuzzmu.png
 #avatar:
-avatar: /wuzzmu.png
+avatar: /assets/images/wuzzmu.png
 
 # Table Of Contents in the Sidebar
 toc:
@@ -255,7 +255,7 @@ toc:
 
 sidebar:
   # Sidebar Position, available value: left | right
-  position: right
+  position: left
   #position: right
 
   # Sidebar Display, available value:
@@ -366,7 +366,7 @@ mathjax:
   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
-han: true
+han: false
 
 # Swiftype Search API Key
 #swiftype_key:
