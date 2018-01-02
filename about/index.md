@@ -3,17 +3,16 @@ title: about
 layout: page
 ---
 
-<center>ひとりで　眠れない夜は
-ひとりで　泣いてちゃみじめよ
-
-なんにも　考えちゃいけない 
-心に　おおいをかけて 
-
+<center>ひとりで　眠れない夜は  
+ひとりで　泣いてちゃみじめよ  
+<br/> 
+なんにも　考えちゃいけない  
+心に　おおいをかけて<br/>
 Go dancing with music!
 Variazione di un Tango
 Just like I'm crazy.
 
-一番に好きだったのは
+一番に好きだったのは<br/> 
 死ぬまで 
 
 If I die young bury me in satin
