@@ -6,7 +6,7 @@
 # Site
 title: 子木自语
 subtitle:
-description:
+description: 庭掃きて雪を忘るる帚かな
 author: 伍子木
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
@@ -117,7 +117,7 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  categories: /categories/
+  #categories: /categories/
   about: /about/
   archives: /archives/
   tags: /tags/
