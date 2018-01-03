@@ -2,7 +2,7 @@
 layout: post
 title: "MathJax with Jekyll"
 date: 2014-02-16
-categories: opinion
+categories: 模版
 tags: [resources, jekyll]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
 ---
@@ -101,3 +101,5 @@ $$ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} $$
 will be displayed as
 
 \\[ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} \\]
+
+
