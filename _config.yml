@@ -243,7 +243,7 @@ toc:
   number: true
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
-  wrap: false
+  wrap: true
 
 
 # Creative Commons 4.0 International License.
@@ -276,7 +276,7 @@ sidebar:
   b2t: false
 
   # Scroll percent label in b2t button
-  scrollpercent: false
+  scrollpercent: true
 
 
 # Blog rolls
