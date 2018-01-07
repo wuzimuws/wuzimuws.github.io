@@ -6,7 +6,7 @@
 # Site
 title: 子木木子
 subtitle: 庭掃きて雪を忘るる帚かな
-description: 庭掃きて雪を忘るる帚かな
+description: 吾心所属，执子之手。
 author: 伍子木
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
@@ -280,11 +280,11 @@ sidebar:
 
 
 # Blog rolls
-links_title: Links
-links_layout: block
-links_layout: inline
-links:
-  Title: http://example.com/
+#links_title: Links
+#links_layout: block
+#links_layout: inline
+#links:
+  #Title: http://example.com/
 
 
 # ---------------------------------------------------------------
