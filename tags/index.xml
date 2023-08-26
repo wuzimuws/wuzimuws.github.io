@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on 浅学派</title>
-    <link>https://examplesite.com/tags/</link>
+    <link>https://qxpai.cn/tags/</link>
     <description>Recent content in Tags on 浅学派</description>
     <image>
       <title>浅学派</title>
-      <url>https://examplesite.com/qxpai.png</url>
-      <link>https://examplesite.com/qxpai.png</link>
+      <url>https://qxpai.cn/qxpai.png</url>
+      <link>https://qxpai.cn/qxpai.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 26 Aug 2023 01:01:42 +0800</lastBuildDate><atom:link href="https://examplesite.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Aug 2023 01:01:42 +0800</lastBuildDate><atom:link href="https://qxpai.cn/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>article</title>
-      <link>https://examplesite.com/tags/article/</link>
+      <link>https://qxpai.cn/tags/article/</link>
       <pubDate>Sat, 26 Aug 2023 01:01:42 +0800</pubDate>
       
-      <guid>https://examplesite.com/tags/article/</guid>
+      <guid>https://qxpai.cn/tags/article/</guid>
       <description></description>
     </item>
     

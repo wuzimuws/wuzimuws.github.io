@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on 浅学派</title>
-    <link>https://examplesite.com/post/</link>
+    <link>https://qxpai.cn/post/</link>
     <description>Recent content in Posts on 浅学派</description>
     <image>
       <title>浅学派</title>
-      <url>https://examplesite.com/qxpai.png</url>
-      <link>https://examplesite.com/qxpai.png</link>
+      <url>https://qxpai.cn/qxpai.png</url>
+      <link>https://qxpai.cn/qxpai.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 26 Aug 2023 01:01:42 +0800</lastBuildDate><atom:link href="https://examplesite.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Aug 2023 01:01:42 +0800</lastBuildDate><atom:link href="https://qxpai.cn/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>测试</title>
-      <link>https://examplesite.com/post/my-first-post/</link>
+      <title>测试abc</title>
+      <link>https://qxpai.cn/post/my-first-post/</link>
       <pubDate>Sat, 26 Aug 2023 01:01:42 +0800</pubDate>
       
-      <guid>https://examplesite.com/post/my-first-post/</guid>
+      <guid>https://qxpai.cn/post/my-first-post/</guid>
       <description>测试一下 🤩
 1 2 3 </description>
     </item>
