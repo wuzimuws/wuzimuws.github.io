@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习就在浅学派</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="ellipse">
+            <span class="ellipse-text">浅 学 派</span>
+        </div>
+
+        <div class="slots-container">
+            <div class="slot" id="slot1">门类</div>
+            <div class="slot" id="slot2">专业</div>
+            <div class="slot3" id="slot3">课程</div>
+            <div class="overlay"></div>
+        </div>
+    </div>
+    
+
+    <div id="slotMachineResult"></div>
+    <button onclick="runAndDisplaySlotMachine()" class="button">随机抽取
+        （仅含双一流，第二轮2022.02，59个专业）</button>
+
+
+    <script>
+        // 定义大类及其子类
+        const categories = {
+            "哲学": {
+                "哲学":["《哲学的故事》(蒋剑峰、张程程)","《大众哲学》(作者未知)","《中国哲学简史》(冯友兰)","《大问题：简明哲学导论》(托马斯·索维尔)","《你的第一本哲学书》(托马斯·内格尔)"]
+            },
+            "经济学":{
+                "经济学":["《经济学原理》(曼昆)","《经济学》(保罗·萨缪尔森)","《经济学通识》(薛兆丰)","《一沙一世界》(郭凯)","《卖桔者言》(张五常)"]
+            },
+            "法学":{
+                "法学":["《西窗法雨》(刘星)","《法治及其本土资源》(苏力)","《法理学》(作者未知)","《法律逻辑学》(作者未知)","《民法学》(作者未知)"],
+                "社会学":["《社会学和我们》(迈克尔·休斯、卡罗琳·克雷勒)","《见树又见林：社会学与生活》(艾伦·G·约翰逊)","《社会学的意识》(牛津大学)","《社会学入门》(汉斯林)","《江村经济》(费孝通)"],
+                "民族学":["《民族学》(马戎)","《西方民族社会学经典读本》(马戎)","《他者的眼光——人类学理论入门》(罗伯特·莱顿)","《民俗学概论》(钟敬文)","《中国民俗学》(乌丙安)"],
+                "马克思主义理论":["《马克思主义哲学的历史和现状（第一卷）》(孙伯鍨等主编)","《政治经济学概论》(作者未知)","《马克思主义哲学的历史和现状（第二卷）》(李华钰等主编)","《二十世纪西方马克思主义哲学》(陈学明等著)","《西方马克思主义探讨》(佩里·安德森著)"]
+            },
+            "教育学":{
+                "教育学":["《教育原理》(孙俊三、雷小波)","《教育学基础》(全国十二所重点师范大学联合编写)","《当代教育心理学》(陈琦、刘儒德)","《教育心理学》(燕良轼)","《中国教育史》(张传燧、孙培青)"]
+            },
+            "文学":{
+                "传播学":["《传播学概论》(威尔伯·施拉姆)","《传媒的四种理论》(弗雷德里克·S·西伯特、威尔伯·施拉姆等编)","《传播学教程》(郭庆光)","《传播学总论》(胡正荣)","《传播学基础：历史、框架与外延》(段鹏)"]            
+            },
+            "历史学":{
+                "世界史":["《世界史：从史前到21世纪全球文明的互动》(威廉•麦克尼尔)","《全球通史：从史前史到21世纪》(L. S. 斯塔夫里阿诺斯)","《文明史 : 人类五千年文明的传承与交流》(费尔南·布罗代尔)","《人类简史：从动物到上帝》(尤瓦尔·赫拉利)","《你一定爱读的极简欧洲史: 为什么欧洲对现代文明的影响这么深》(约翰·赫斯特)"],
+                "考古学":["《考古学与史前文明》(布赖恩·费根)","《考古学入门》(布赖恩·费根)","《神祇、陵墓与学者》(策拉姆)","《考古的故事》(埃里克·H.克莱因)","《明代帝王陵墓制度研究》(刘毅)"]            
+            },
+            "理学":{
+                "物理学":["《Fundamentals of Physics》(David Halliday)","《费曼物理学讲义》(费曼)","《麦克斯韦和汤姆逊的物理学》(雅克・费尔纳)","《Fourier Analysis：An Introduction》","《Complex Analysis》"],
+                "化学":["《元素的盛宴》(基恩)","《化学简史》(作者未知)","《视觉之旅：神奇的化学元素》(Theodore Gray)","《化学键的本质》(作者未知)","《无机化学》(张祖德)"],
+                "天文学":["《天文学入门：带你一步一步成功探索星空》（魏纳•E.策尔尼克）","《大众天文学》（套装上下册）","《星空教室》（日本多摩六都科学馆）","《夜观星空：天文观测实践指南》（特伦斯•迪金森）","《简明天文学教程》（余明）"],
+                "大气科学":["《Meteorology Today》","《The Atmosphere: An Introduction to Meteorology》(中译本：气象学与生活)","《Introduction to Atmospheric science》（Daniel Jacob）","《大气科学概论》()","《大气科学研究从入门到精通》(黄刚)"],
+                "海洋科学":["《海洋科学导论》(冯士筰/李凤歧/李少菁著)","《Marine Science - An Illustrated Guide to Science》(Science Visual Resource系列)","《台湾海峡及邻近海域鱼类图鉴》(陈明茹 /杨圣云著)","《Introductory Oceanography》(Thurman Emeritus, Harold V., Trujillo, Alan P.)","《Essentials of Oceanography》(Trujillo, Alan P., Thurman, Harold V.)"],
+                "地球物理学":["《固体地球物理学导论》(曾融生)","《固体地球物理学基础》(傅容珊)","《固体地球物理学概论》(滕吉文)","《地球物理学基础》(傅承义、陈运泰、祁贵仲著)","《Fundamentals of Geophysics》(William Lowrie)"],
+                "地质学":["《普通地质学》(舒良树)","《地球科学概论》","《地球大百科》(DK出版物中译本)","《地球简史》(Richard Fortey)","《地球科学导论》(Frederick K. Lutgens 和 Edward J. Tarbuck)"],
+                "生态学":["《生态学基础》(奥德姆)","《生态学:从个体到生态系统 (第四版)》","《基础生态学 (第3版)》(刘翠娟)","《Ecology: From Individuals to Ecosystems》","《Foundations of Ecology: Classic Papers with Commentaries》"],
+                "心理学":["《心理学与生活》(理查德·格里格和菲利普·津巴多)","《这才是心理学》(基思·斯坦诺维奇)","《心理学导论》(库恩 (Dennis Coon) / John O.Mitterer)","《社会心理学》(戴维·迈尔斯)","《津巴多普通心理学》(菲利普津巴多 /罗伯特约翰逊 /薇薇安麦卡恩)"],
+                "统计学":["《统计学》(贾俊平)","《统计学习基础》(Trevor Hastie、Robert Tibshirani 和 Jerome Friedman)","《概率论与数理统计》(盛骤)","《商务与经济统计学》","《统计分析与SPSS的应用》(薛薇)"]
+            },
+            "工学":{
+                "机械工程":["《机械设计基础》(李克强)","《机械原理》(黄康宁)","《机械制造基础》(王效宾)","《理论力学》(李克强)","《材料力学》(李克强)"],
+                "材料科学与工程":["《材料科学基础》(清华大学出版社)","《Material Science and Engineering by William Callister》","《材料科学与工程入门》(毛卫民)","《材料分析方法》(哈工大周玉)","《材料现代分析方法》(北工大左演声)"],
+                "冶金工程":["《物理化学》","《冶金物理化学》","《冶金传输原理》","《电化学冶金》","《炼钢学》"],
+                "电子科学与技术":["《电子学》第二版","《电子技术基础》第2版","《新编电子电路大全》","《运算放大器权威指南》第4版","《电子电气工程师必知必会》第二版"],
+                "通信工程":["《通信原理》(作者未知)","《数字通信原理》(作者未知)","《信号与系统》(奥克海姆版本)","《数字信号处理》(作者未知)","《移动通信原理》(作者未知)"],
+                "计算机科学与技术":["深入理解计算机系统（Computer Systems: A Programmer's Perspective）(Randal E. Bryant, David R. O'Hallaron)","算法导论（Introduction to Algorithms）(Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein)","算法设计（Algorithm Design）(Jon Kleinberg, Éva Tardos)","线性代数应该这样学（第3版）（Linear Algebra Done Right）(Sheldon Axler)","组合数学（第5版）（Introductory Combinatorics）(Richard A. Brualdi)"],
+                "软件工程":["构建之法（邹欣）","代码整洁之道（Robert C. Martin）","重构 改善既有代码的设计（Martin Fowler）","敏捷整洁之道：回归本源（Robert C. Martin）","领域驱动设计：软件核心复杂性应对之道（Eric Evans）"],
+                "土木工程":["土木工程概论（沈聚敏）","高等数学（同济大学数学系）","线性代数（同济大学数学系）","理论力学（李克强）","材料力学（李克强）"],
+                "地质工程":["普通地质学（舒良树）","地球科学导论（Frederick K. Lutgens, Edward J. Tarbuck）","地球大百科（DK出版物中译本）","工程地质学（清华大学出版社）","地质学基础（中国地质大学（武汉））"],
+                "交通运输":["交通工程学（周商吾）","交通规划（王炜）","交通管理与控制（徐建闽）","交通系统工程（任福田）","运筹学（清华大学出版社）"],
+                "船舶与海洋工程":["船舶与海洋工程概论（刘 蔚）","海洋工程领域有哪些经典的教材（涉及传统力学结构、机械电子、信息技术等各方面）","Handbook of Offshore Engineering","Hydrodynamics of Offshore Structures (S.K. Chakrabarti) ","Marine Hydrodynamics (John N. Newman)"],
+                "农业工程":["农业工程概论（沈聚敏）","高等数学（同济大学数学系）","线性代数（同济大学数学系）","理论力学（李克强）","材料力学（李克强）"],
+                "环境科学与工程":["环境学概论（何强）","环境化学（戴桂树）","环境监测（奚旦立）","环境工程学（蒋展鹏）","环境微生物学"],
+                "环境科学":["环境学概论（何强）","环境化学（戴桂树）","环境监测（奚旦立）","环境工程学（蒋展鹏）","环境微生物学"],
+                "生物医学工程":["生物医学工程概论（陈瑞林、方文峰、刘晓晖）","生物医学工程学（邓玉林主编）","生物工程基础（肖华斌）","生物电磁学","生物力学"],
+                "食品科学与工程":["食品化学（第五版）（斯里尼瓦桑·达莫达兰、柯克·L.帕金）","食品工程原理（赵思明）","食品工艺学（夏文水）","食品微生物学","食品添加剂"],
+                "建筑学":["《建筑学基础》(Francis D.K. Ching)","《建筑学史》(中国建筑工业出版社)","《关于建筑的思考》(Golin Davies)","《建筑与现代性》( 希尔德·海嫩)","《埃拉蒂奥·迪埃斯特: 结构艺术的创造力》(埃拉蒂奥·迪埃斯特)"],
+                "城乡规划":["《城市规划原理》(吴志强、李德华)","《城市土地使用规划》(菲利普等，吴志强译)","《人居环境科学导论》(吴良镛)","《城市道路与交通规划》(文国玮)","《城市设计图解》(金广君)"],
+                "风景园林":["《插画风景园林史》(Elizabeth Boults，Chip Sullivan)","《风景园林中的形式和结构：一本图像介绍》(Catherine Dee)","《园林景观设计：从概念到形式》(Grant W. Reid)","《开放空间：风景园林设计》(Hans Loidl, Stefan Bernard)","《风景园林绘图：从速写到屏幕、再到场地》(Edward Hutchison)"]
+            },
+            "农学":{
+                "园艺":["《极简园艺入门》(金子明人)","《DK园艺智慧》(蒙提·唐)","《园丁的一年》(蒙提·唐)","《园艺植物繁殖全书》(卡罗尔·克莱因)","《花道的艺术》(三井德馨)"],
+                "植物保护":["《植物学》","《植物生理学》","《土壤肥料学》","《植物病理学》","《植物害虫学》"],
+                "农业资源与环境":["《农业资源与环境导论》(朱勃)","《寂静的春天》(Rachel Carson)","《增长的极限》(Donella H. Meadows)","《水4.0》(David Sedlak)","《环境化学》(戴桂树)"],
+                "林学":["《林学概论》(赵忠)","《园林树木学》(陈有民)","《中国林业史》(李莉)","《中国植物图鉴》","《森林生态学》(李俊清)"],
+                "园林":["《园林景观设计--从概念到形式》(格兰特·W. 里德)","《风景园林设计要素》(诺曼·K·布思)","《景观设计学:场地规划与设计手册》(约翰·O·西蒙兹 / 巴里·W·斯塔克)","《看不见的花园》(彼得·沃克 / 梅拉妮·西莫)","《图解景观设计史》(伊丽莎白•伯顿 / 奇普•沙利文)"]
+            },
+            "医学":{
+                "基础医学":["《细胞生物学》","《组织胚胎学》","《人体解剖学》","《局部解剖学》","《生理学》"],
+                "生物医学":["《生物医学科学基础》(Bruce Alberts)","《生物医学工程导论》(John Enderle)","《生物医学信号处理与仪器分析》(John G. Webster)","《生物医学信息学导论》(Edward H. Shortliffe)","《生物医学伦理学》(Tom L. Beauchamp)"],
+                "临床医学":["《人体解剖学》","《组织学与胚胎学》","《生物化学》","《神经生物学》","《生理学》"],
+                "口腔医学":["《口腔医学基础》(人民卫生出版社)","《口腔解剖学》(人民卫生出版社)","《口腔组织病理学》(人民卫生出版社)","《口腔生理学》(人民卫生出版社)","《口腔临床医学概论》(人民卫生出版社)"],
+                "预防医学":["《预防医学》(人民卫生出版社)","《流行病学》(人民卫生出版社)","《卫生统计学》(人民卫生出版社)","《环境卫生学》(人民卫生出版社)","《劳动卫生学》(人民卫生出版社)"],
+                "中医学":["《中医学概论》","《中医入门》(秦伯未)","《古代的中医》","《儿童健康讲记》","《问中医几度秋凉》"],
+                "药学":["《药物发现——从病床到华尔街》","《药物史话》","《师从天才——一个科学王朝的建立》","《致命药方》","《药物简史》"],
+                "中药学":["《中药学》(人民卫生出版社)","《本草纲目》(李时珍)","《神农本草经》","《中药大辞典》","《全国中草药汇编》"],
+                "护理学":["《基础护理学》(李小寒，尚少梅)","《护理学：理论、实践与研究》(Joan L. Creasia, Patricia Parker)","《护理伦理学：判断和行动》(Janie B. Butts, Karen L. Rich)","《护理研究与实践》(Debbie Kralik, Vivian Coates, Cheryl Peters, Rebekkah Middleton)","《护理诊断手册》(Betty J. Ackley, Gail B. Ladwig, Mary Beth Flynn Makic)"]
+            },
+            "管理学":{
+                "管理科学":["《科学管理原理》(弗雷德里克·泰勒)","《管理者必读12篇》","《管理：任务、责任和实践》(彼得·德鲁克)","《第五项修炼》(彼得·圣吉)","《基业长青》(詹姆斯·柯林斯, 吉里·波勒斯)"],
+                "工商管理":["《科学管理原理》(弗雷德里克·泰勒)","《管理学原理》(罗宾斯)","《管理：任务、责任和实践》(彼得·德鲁克)","《第五项修炼》(彼得·圣吉)","《基业长青》(詹姆斯·柯林斯, 吉里·波勒斯)"],
+                "农林经济管理":["《农业经济学》","《农业政策学》(钟甫宁)","《Agricultural Economics》(Ritson)","《农业经济管理与发展》","《农村经济发展研究》"]
+            },
+            "艺术学":{
+                "舞蹈学":["《舞蹈鉴赏》(茅慧)","《舞蹈知识手册》(隆荫培, 徐尔充, 欧建平)","《舞蹈艺术概论》(隆荫培, 徐尔充)","《图说世界舞蹈》(江东, 祝嘉怡)","《西方舞蹈史及作品鉴赏》(欧建平)"],
+                "美术学":["《伯里曼人体结构绘画教学》(乔治·伯里曼)","《CG造型基础与创作》(Victor cloux)","《透视如此简单》(欧内斯特诺灵)","《透视画法入门》(约瑟夫德阿梅利奥)","《趣味透视学》(罗比李)"]
+            }
+        };
+
+        function getRandomCategory() {
+            const keys = Object.keys(categories);
+            return keys[Math.floor(Math.random() * keys.length)];
+        }
+
+        function getRandomSubCategory(category) {
+            const subCategories = Object.keys(categories[category]);
+            return subCategories[Math.floor(Math.random() * subCategories.length)];
+        }
+
+        function getRandomSubSubCategory(category, subCategory) {
+            const subSubCategories = categories[category][subCategory];
+            return subSubCategories[Math.floor(Math.random() * subSubCategories.length)];
+        }
+
+        // 模拟老虎机运算
+        function runSlotMachine() {
+            const firstSlot = getRandomCategory();
+            const secondSlot = getRandomSubCategory(firstSlot);
+            const thirdSlot = getRandomSubSubCategory(firstSlot,secondSlot); 
+
+            return [firstSlot, secondSlot, thirdSlot];
+        }
+
+        function runAndDisplaySlotMachine() {
+            const result = runSlotMachine();
+            document.getElementById('slot1').innerText = result[0];
+            document.getElementById('slot2').innerText = result[1];
+            document.getElementById('slot3').innerText = result[2];
+        }
+    </script>
+</body>
+</html>

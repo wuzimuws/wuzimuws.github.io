@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'wenquan';  /* 给字体起一个名字 */
+    src: url('wenquanyi-micro-hei.ttf') format('truetype');  /* 主路径和格式 */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'wenquan', sans-serif;
+    background-color: rgb(11, 42, 59);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.slot-machine {
+    display: flex;
+    border: 5px solid #000;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    position: relative;  /* 设置为相对定位，使其子元素可以基于它进行绝对定位 */
+}
+
+.slot {
+    padding: 20px;
+    border: 2px solid #000;
+    margin: 0 0px;
+    font-weight: bolder;
+    background-color: rgb(242, 239, 217);
+    text-align: center;
+    float: left;
+    width: 150px;
+    height: 160px;
+    line-height: 25px;
+    font-size: 2em;
+    display: flex;  /* 使用 Flexbox */
+    justify-content: center;  /* 水平居中 */
+    align-items: center;  /* 垂直居中 */
+}
+.slot3 {
+    padding: 20px;
+    border: 2px solid #000;
+    margin: 0 0px;
+    font-weight: bolder;
+    background-color: rgb(242, 239, 217);
+    text-align: center;
+    float: left;
+    width: 400px;
+    height: 160px;
+    line-height: 25px;
+    font-size: 1.5em;
+    display: flex;  /* 使用 Flexbox */
+    justify-content: center;  /* 水平居中 */
+    align-items: center;  /* 垂直居中 */
+}
+.ellipse {
+    position: absolute;  /* 设置为绝对定位 */
+    bottom: 95%;  /* 使其与 wrapper 的顶部对齐 */
+    left: 50%;  /* 将椭圆居中 */
+    transform: translate(-50%, 50%);  /* 使用 transform 进一步确保居中对齐 */
+    width: 850px;        /* 椭圆的宽度 */
+    height: 250px;       /* 椭圆的高度 */
+    background-color: rgb(227, 70, 69);   /* 椭圆的背景色 */
+    border-radius: 50%;  /* 椭圆的水平和垂直半径 */
+    border: 10px solid rgb(11, 42, 59);
+    z-index: 0;  /* 使其位于 wrapper 之下 */
+    box-shadow: 0px -5px 0px rgb(242, 239, 217); /* 10px 10px 是阴影的偏移量 */
+    display: flex;  /* 使用 Flexbox */
+    justify-content: center;  /* 水平居中 */
+    align-items: center;  /* 垂直居中 */
+    
+}
+
+.ellipse-text {
+    color: rgb(242, 239, 217);  /* 或您喜欢的任何其他颜色 */
+    font-size: 60px;  /* 根据需要调整 */
+    font-style: italic;  /* 使字体倾斜 */
+    transform: translateY(-60px);  /* 这行将文本向上移动10px */
+    text-shadow: 2px 2px 5px rgb(11, 42, 59); /* 添加文本阴影：右侧偏移2px，底部偏移2px，模糊半径5px，颜色为带有0.3透明度的黑色 */
+}
+
+.slots-container {
+    display: flex;
+    position: relative;
+    align-items: center;  /* 垂直居中子元素 */
+    padding: 40px 40px;
+    justify-content: center;  /* 水平居中 */
+    background-color: rgb(227, 70, 69);
+    border: 5px solid rgb(11, 42, 59);
+    border-radius: 50px;
+    gap: 10px;  /* 设置间隙 */
+    box-shadow: 5px 5px 0px rgb(242, 239, 217); /* 10px 10px 是阴影的偏移量 */
+    z-index: 1;  /* 使其位于 ellipse 之上 */
+}
+
+.slots-container::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    right: 50px;
+    bottom: 40px;
+    border: 4px solid rgb(11, 42, 59);
+    border-radius: 30px;  /* 调整为需要的圆角大小 */
+    box-shadow: 0 0 0 30px rgb(227, 70, 69);  /* 这里的1000px是一个足够大的数值，以确保它覆盖整个.wrapper */
+    pointer-events: none;  /* 确保你可以与下面的元素互动 */
+    
+}
+
+.button {
+    font-family: 'wenquan';
+    margin-top: 60px;
+    padding: 10px 40px;
+    background-color: rgb(227, 70, 69);
+    font-size: 20px;
+    border: none;  /* 移除默认的边框 */
+    cursor: pointer;  /* 设置鼠标悬停时的样式为手形 */
+    color: rgb(242, 239, 217);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: pre-line; /* 换行和空白被尊重 */
+    position: relative;  /* 确保伪元素相对于此按钮定位 */
+    transition: all 0.3s;  /* 平滑的过渡效果 */
+}
+
+.button:hover::before {
+    content: "";  /* 伪元素内容 */
+    position: absolute;  /* 绝对定位 */
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;  /* 伪元素比按钮稍微大一点，产生边缘发光效果 */
+    box-shadow: 0 0 10px rgb(242, 239, 217), 0 0 20px rgb(242, 239, 217), 0 0 30px rgb(242, 239, 217);  /* 发光效果 */
+    border-radius: inherit;  /* 如果按钮有圆角，确保发光效果也有 */
+    /* z-index: -1;  将发光效果置于按钮下方 */
+}
+.button::before {
+    content: "";  /* 伪元素内容 */
+    position: absolute;  /* 绝对定位 */
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;  /* 伪元素比按钮稍微大一点，产生边缘发光效果 */
+    border: 2px solid rgb(242, 239, 217); 
+    border-radius: 8px;
+    /* z-index: -1;  将发光效果置于按钮下方 */
+}
