@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on 浅学派</title>
-    <link>https://qxpai.cn/post/</link>
-    <description>Recent content in Posts on 浅学派</description>
+    <title>建站 on 浅学派</title>
+    <link>https://qxpai.cn/categories/%E5%BB%BA%E7%AB%99/</link>
+    <description>Recent content in 建站 on 浅学派</description>
     <image>
       <title>浅学派</title>
       <url>https://qxpai.cn/qxpai.png</url>
@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 27 Aug 2023 11:08:33 +0800</lastBuildDate><atom:link href="https://qxpai.cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Aug 2023 11:08:33 +0800</lastBuildDate><atom:link href="https://qxpai.cn/categories/%E5%BB%BA%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PaperMod主题下添加Waline系统</title>
       <link>https://qxpai.cn/post/papermod%E4%B8%BB%E9%A2%98%E4%B8%8B%E6%B7%BB%E5%8A%A0waline%E7%B3%BB%E7%BB%9F/</link>
@@ -22,19 +22,6 @@
 🔗 Getting Started With Hugo 修改toc位置 将thems/PaperMod/assets下的css文件夹拷贝到主文件夹下的assets文件夹中,在/common/post-single.css中修改
 .toc { margin: 0 2px 40px 2px; border: 1px solid var(--border); background: var(--code-bg); border-radius: var(--radius); padding: 0.4em; position: fixed; top: 100px; right: 5%; width: 20%; max-height: 80vh; overflow-y: auto; } 添加Waline评论系统到Papermod主题 在config.yml中打开comments开头： params: comments: true 将 Waline 样式添加到头部: 打开你的 Hugo 项目中的 layouts/partials 文件夹下的 head.html 文件，然后在适当的位置（通常是其他样式表链接的下方）添加以下代码： 将 Waline 的客户端脚本和初始化代码添加到 comments.html: 在 layouts/partials 目录下创建或编辑 comments.html 文件，然后加入以下代码：
 &amp;lt;div id=&amp;#34;waline&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import { init } from &amp;#39;https://unpkg.</description>
-    </item>
-    
-    <item>
-      <title>欢迎来到「浅学派」👏👏👏</title>
-      <link>https://qxpai.cn/post/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%B5%85%E5%AD%A6%E6%B4%BE/</link>
-      <pubDate>Sat, 26 Aug 2023 01:01:42 +0800</pubDate>
-      
-      <guid>https://qxpai.cn/post/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%B5%85%E5%AD%A6%E6%B4%BE/</guid>
-      <description>浅学派是什么? 浅学派是一种学习心态
-浅学派的目标的什么? 高效学习 浅学派的优势是什么? 高效 专注 从兴趣出发,在阅读或学习时能更加专注
-浅学派的方法 保持好奇心 找到自己的兴趣点 找到自己的兴趣点对于浅学派非常重要,```
-辅助工具 浅学派提供了一个帮助发现自己的兴趣点的小工具大转盘,其中包括了「双一流」学科的入门书籍,您可以随机抽取其中的课程,从中选取自己感兴趣的书.
-快速阅读的方法 将目录打印出来 用笔勾选出目录中自己感兴趣的部分 只看自己感兴趣的内容 阅读过程中注意发散思考,根据自己的习惯做笔记 整理自己的疑问/看法/观点,形成文档 分享共进步 如果您希望与他人分享自己的观点/看法,欢迎您在本页评论,或投稿至「浅学派」官方邮箱📩wuzimuws@gmail.com。对于您提交并被我们采纳的所有内容，我们承诺在文章或作品上明确标注您的名字或您希望使用的笔名。 如果您觉得「浅学派」对您有帮助💪,欢迎将本网站分享给您的朋友🤝! 如果您乐于支持「浅学派」,欢迎您☕️Buy me a Coffee!,感激不尽🤩! 开始学习吧!🥳 </description>
     </item>
     
   </channel>
