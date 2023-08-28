@@ -6,8 +6,8 @@
     <description>Recent content in 建站 on 浅学派</description>
     <image>
       <title>浅学派</title>
-      <url>https://qxpai.cn/qxpai.png</url>
-      <link>https://qxpai.cn/qxpai.png</link>
+      <url>https://qxpai.cn/qxpai01.png</url>
+      <link>https://qxpai.cn/qxpai01.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -20,8 +20,8 @@
       <guid>https://qxpai.cn/post/papermod%E4%B8%BB%E9%A2%98%E4%B8%8B%E6%B7%BB%E5%8A%A0waline%E7%B3%BB%E7%BB%9F/</guid>
       <description>papermod主题下添加waline系统 Papermod个性化配置 为了避免破坏原有样式文件，将thems/PaperMod/layouts下的_default和partials文件夹均拷贝到主文件夹下的layouts文件夹中，在该文件夹下进行配置。 (img)
 🔗 Getting Started With Hugo 修改toc位置 将thems/PaperMod/assets下的css文件夹拷贝到主文件夹下的assets文件夹中,在/common/post-single.css中修改
-.toc { margin: 0 2px 40px 2px; border: 1px solid var(--border); background: var(--code-bg); border-radius: var(--radius); padding: 0.4em; position: fixed; top: 100px; right: 5%; width: 20%; max-height: 80vh; overflow-y: auto; } 添加Waline评论系统到Papermod主题 在config.yml中打开comments开头： params: comments: true 将 Waline 样式添加到头部: 打开你的 Hugo 项目中的 layouts/partials 文件夹下的 head.html 文件，然后在适当的位置（通常是其他样式表链接的下方）添加以下代码： 将 Waline 的客户端脚本和初始化代码添加到 comments.html: 在 layouts/partials 目录下创建或编辑 comments.html 文件，然后加入以下代码：
-&amp;lt;div id=&amp;#34;waline&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import { init } from &amp;#39;https://unpkg.</description>
+.toc { margin: 0 2px 40px 2px; border: 1px solid var(--border); background: var(--code-bg); border-radius: var(--radius); padding: 0.4em; position: fixed; top: 100px; right: 5%; width: 20%; max-height: 80vh; overflow-y: auto; } 要在手机端不显示 .toc，您可以使用媒体查询来达到这个效果。以下是一个示例，该示例假定手机屏幕的宽度小于或等于 768px（这是一个常用的断点，但您可以根据需要进行调整）
+@media (max-width: 768px) { .toc { display: none; } } 添加Waline评论系统到Papermod主题 在config.yml中打开comments开头： params: comments: true 将 Waline 样式添加到头部: 打开你的 Hugo 项目中的 layouts/partials 文件夹下的 head.html 文件，然后在适当的位置（通常是其他样式表链接的下方）添加以下代码： 将 Waline 的客户端脚本和初始化代码添加到 comments.</description>
     </item>
     
   </channel>
