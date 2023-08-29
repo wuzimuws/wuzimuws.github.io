@@ -167,7 +167,7 @@ body {
 
     .slot, .slot3 {
         width: 220px; /* Slots take full width, subtracting some padding */
-        margin: 0px 0px; /* Adjust margins to avoid overcrowding */
+        margin: 1px 1px; /* Adjust margins to avoid overcrowding */
         height: 50px;
         
     }
@@ -175,16 +175,18 @@ body {
     .ellipse {
         width: 80%; /* Adjusting ellipse width */
         height: 180px; /* Adjusting ellipse height for better proportion */
+        z-index: 0;
     }
 
     .slots-container {
         flex-direction: column; /* Stack slots vertically */
-        padding: 2rem 2rem; /*Adjusting padding for a more balanced appearance*/
+        padding: 2rem 2rem; 
         gap: 15px; /* Adjusting gap for better spacing */
-        top: 20px;
+        top: 10px;
         left: 3px;
         right: 3px;
         bottom: 20px;
+        z-index: 1;  /* 使其位于 ellipse 之上 */
     }
 
     .ellipse-text {
@@ -199,9 +201,10 @@ body {
     }
 
     .slots-container::before {
-        top: 20px;
+        top: 25px;
         left: 30px;
         right: 30px;
-        bottom: 20px; /* Adjust pseudo-element dimensions for better appearance */
+        bottom: 25px; /* Adjust pseudo-element dimensions for better appearance */
+        box-shadow: 0 0 0 10px rgb(227, 70, 69);  /* 这里的1000px是一个足够大的数值，以确保它覆盖整个.wrapper */
     }
 }
